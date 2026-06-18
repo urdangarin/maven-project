@@ -8,5 +8,6 @@ pipeline {
                 sh 'mvn clean package'
                 // Add your build steps here
             }
-        }      
+        }
+    }      
 }
