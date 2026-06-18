@@ -5,8 +5,9 @@ pipeline {
         stage('Processo de Build') {
             steps {
                 echo 'Building a aplicação...'
-                sh 'mvn clean package'
+                sh "mvn clean package"
                 // Add your build steps here
+                sh "docker build . -t tomcatwebapp:${env.BUILD_ID}"
             }
         }
     }      
